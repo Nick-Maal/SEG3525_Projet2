@@ -12,7 +12,7 @@ import Forums from './Forums';
 
 function App() {
   return (
-    <BrowserRouter basename="/Pixelnexus">
+    <BrowserRouter basename="/SEG3525_Projet2">
       <div className="App">
         <Header />
         <NavBar /> 
