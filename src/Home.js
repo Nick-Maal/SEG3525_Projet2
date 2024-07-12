@@ -9,6 +9,7 @@ function Home() {
     <main className="home-page">
       <div className="image-collage">
         <img src={logo} alt="Logo" />
+        <span className="sr-only">Pixel Nexus logo</span> 
       </div>
 
       <div className="contact-section">

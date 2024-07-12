@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 
-function NavBar() {
+function NavBar({ onLanguageChange, language }) {
   return (
     <nav> 
       <ul>
@@ -12,6 +12,11 @@ function NavBar() {
         <li><Link to="/browse">Browse</Link></li>
         <li><Link to="/tutorials">Tutorials</Link></li>
         <li><Link to="/forums">Forums</Link></li>
+        <li>
+          <button className="language-button" onClick={onLanguageChange}>
+            {language === 'en' ? 'Français' : 'English'}
+          </button>
+        </li>
       </ul>
     </nav>
   );
