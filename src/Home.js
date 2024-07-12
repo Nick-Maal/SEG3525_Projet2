@@ -13,7 +13,7 @@ function Home() {
       <div className="contact-section">
         <h2>Contact Us</h2>
         <address>
-          123 Donald Street<br />
+          123 Test<br />
           Ottawa, Ontario R3S PO2<br />
           Phone: (123) 456-7890<br />
           Email: info@pixelnexus.com
