@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/SEG3525_Project2/static/css/main.dcd046fd.css",
-    "main.js": "/SEG3525_Project2/static/js/main.3657d45c.js",
-    "static/media/logo.jpeg": "/SEG3525_Project2/static/media/logo.43d59274dc6c5bbb083f.jpeg",
-    "static/media/rdr2.jpeg": "/SEG3525_Project2/static/media/rdr2.31306667740f151c21b0.jpeg",
-    "static/media/stardew_valley.jpeg": "/SEG3525_Project2/static/media/stardew_valley.136627d60369d9aeeae0.jpeg",
-    "static/media/celeste.jpeg": "/SEG3525_Project2/static/media/celeste.95848da00be76d7664f9.jpeg",
-    "static/media/imageTeam.png": "/SEG3525_Project2/static/media/imageTeam.9f517cd4d7d76d17fab7.png",
-    "index.html": "/SEG3525_Project2/index.html",
-    "main.dcd046fd.css.map": "/SEG3525_Project2/static/css/main.dcd046fd.css.map",
-    "main.3657d45c.js.map": "/SEG3525_Project2/static/js/main.3657d45c.js.map"
+    "main.css": "/SEG3525_Projet2/static/css/main.dcd046fd.css",
+    "main.js": "/SEG3525_Projet2/static/js/main.d8b6857c.js",
+    "static/media/logo.jpeg": "/SEG3525_Projet2/static/media/logo.43d59274dc6c5bbb083f.jpeg",
+    "static/media/rdr2.jpeg": "/SEG3525_Projet2/static/media/rdr2.31306667740f151c21b0.jpeg",
+    "static/media/stardew_valley.jpeg": "/SEG3525_Projet2/static/media/stardew_valley.136627d60369d9aeeae0.jpeg",
+    "static/media/celeste.jpeg": "/SEG3525_Projet2/static/media/celeste.95848da00be76d7664f9.jpeg",
+    "static/media/imageTeam.png": "/SEG3525_Projet2/static/media/imageTeam.9f517cd4d7d76d17fab7.png",
+    "index.html": "/SEG3525_Projet2/index.html",
+    "main.dcd046fd.css.map": "/SEG3525_Projet2/static/css/main.dcd046fd.css.map",
+    "main.d8b6857c.js.map": "/SEG3525_Projet2/static/js/main.d8b6857c.js.map"
   },
   "entrypoints": [
     "static/css/main.dcd046fd.css",
-    "static/js/main.3657d45c.js"
+    "static/js/main.d8b6857c.js"
   ]
 }
