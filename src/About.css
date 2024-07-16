@@ -23,6 +23,19 @@
   border-radius: 10px;
 }
   
+.team-image {
+  height: 20%; 
+    overflow: hidden;
+    border: 1px solid #e6e6fa;
+    padding: 1rem;
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    background-color: #cdc8f7;
+    margin: 1rem auto; 
+    width: 20%;
+    margin-bottom: 2rem;
+    object-fit: cover; 
+}
 .company-info {
   flex: 1; 
 }

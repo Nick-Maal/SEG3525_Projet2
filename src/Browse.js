@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './Browse.css';
+import rdr2Image from './images/rdr2.jpeg';
+import witcher3Image from './images/witcher3.jpeg';
+import celesteImage from './images/celeste.jpeg';
+import stardewValleyImage from './images/stardew_valley.jpeg';
 
 function Browse() {
   const [selectedGame, setSelectedGame] = useState(null);
@@ -44,7 +48,7 @@ function Browse() {
       genre: 'Action-Adventure',
       price: '$39.99',
       rating: 4.8,
-      image: 'rdr2.jpeg',
+      image: rdr2Image,
       description: 'America, 1899. The end of the wild west era has begun. After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive. As deepening internal divisions threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang who raised him.',
     },
     {
@@ -53,7 +57,7 @@ function Browse() {
       genre: 'Action RPG',
       price: '$24.99',
       rating: 4.9,
-      image: 'witcher3.jpeg',
+      image: witcher3Image,
       description: 'The Witcher 3: Wild Hunt is a story-driven, next-generation open world role-playing game set in a visually stunning fantasy universe full of meaningful choices and impactful consequences. In The Witcher, you play as Geralt of Rivia, a monster hunter tasked with finding a child from an ancient prophecy. You’ll journey through war-torn kingdoms and slay legendary creatures, explore towns rife with political intrigue, and interact with a diverse cast of characters.',
     },
     {
@@ -62,7 +66,7 @@ function Browse() {
       genre: 'Platformer',
       price: '$19.99',
       rating: 4.7,
-      image: 'celeste.jpeg',
+      image: celesteImage,
       description: 'Help Madeline survive her inner demons on her journey to the top of Celeste Mountain, in this super-tight platformer from the creators of TowerFall. Brave hundreds of hand-crafted challenges, uncover devious secrets, and piece together the mystery of the mountain.',
     },
     {
@@ -71,7 +75,7 @@ function Browse() {
       genre: 'Simulation RPG',
       price: '$19.99',
       rating: 4.6,
-      image: 'stardew_valley.jpeg',
+      image: stardewValleyImage,
       description: 'Stardew Valley is an open-ended country-life RPG! You’ve inherited your grandfather’s old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won’t be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town’s most vibrant hub of activity, now lies in shambles.',
     },
   ];
@@ -175,7 +179,7 @@ function Browse() {
       <div className="game-grid">
         {filteredGames.map((game) => (
           <div className="game-card" key={game.id} onClick={() => openGameDetails(game)}>
-            <img src={require(`./images/${game.image}`).default} alt={game.title} />
+            <img src={game.image} alt={game.title} />
             <h3>{game.title}</h3>
             <p>Rating: {game.rating} stars</p>
             <p>Price: {game.price}</p>

@@ -4,9 +4,9 @@ import Header from './Header';
 import Footer from './Footer';
 import NavBar from './NavBar';
 import Home from './Home';
-import HomeFR from './HomeFR';  
+import HomeAR from './HomeAR';  
 import About from './About';
-import AboutFR from './AboutFR'; 
+import AboutAR from './AboutAR'; 
 import Articles from './Articles';
 import Browse from './Browse';
 import Tutorials from './Tutorials';
@@ -16,7 +16,7 @@ function App() {
   const [language, setLanguage] = useState('en');
 
   const handleLanguageChange = () => {
-    setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'fr' : 'en'));
+    setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'ar' : 'en'));
   };
 
   return (
@@ -26,8 +26,8 @@ function App() {
         <NavBar onLanguageChange={handleLanguageChange} language={language} />
         <div className="content-wrapper">
           <Routes>
-            <Route path="/" element={language === 'en' ? <Home /> : <HomeFR />} />
-            <Route path="/about" element={language === 'en' ? <About /> : <AboutFR />} />
+            <Route path="/" element={language === 'en' ? <Home /> : <HomeAR />} />
+            <Route path="/about" element={language === 'en' ? <About /> : <AboutAR />} />
             <Route path="/articles" element={<Articles />} />
             <Route path="/browse" element={<Browse />} />
             <Route path="/tutorials" element={<Tutorials />} />

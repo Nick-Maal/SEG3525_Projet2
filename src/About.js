@@ -10,6 +10,7 @@ function About() {
       <div className="about-content">
         <div className="team-image">
           <img src={teamImage} alt="Our Team" />
+          <span className="sr-only">Drawn picture of a team meeting</span> 
         </div>
         <div className="company-info">
           <h2>Our Company</h2>

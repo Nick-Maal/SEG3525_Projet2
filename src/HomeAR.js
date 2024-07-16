@@ -8,12 +8,12 @@ function Home({ language }) {
       <div className="image-collage">
         <div className="logo-container" aria-label="Pixel Nexus logo">
           <img src={logo} alt="Logo" />
-          <span className="sr-only">Pixel Nexus logo</span> 
+          <span className="sr-only">شعار بيكسل نيكسوس</span> 
         </div>
       </div>
 
       <div className="contact-section">
-        <h2>{language === 'en' ? 'Contact Us' : 'Nous Contacter'}</h2>
+        <h2>{language === 'en' ? 'Contact Us' : 'نوس كونتاكتر'}</h2>
         <address>
           {language === 'en' ? (
             <>
@@ -24,10 +24,10 @@ function Home({ language }) {
             </>
           ) : (
             <>
-              123 Test<br />
-              Ottawa, Ontario R3S PO2<br />
-              Téléphone : (123) 456-7890<br />
-              Courriel : info@pixelnexus.com
+              123 اختبار<br />
+              أوتاوا، أونتاريو R3S PO2<br />
+              رقم الهاتف: (123) 456-7890<br />
+              كوريل: info@pixelnexus.com
             </>
           )}
         </address>
