@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './Tutorials.css';
+import cyberpunkImage from './images/cyberpunk.jpeg';
+import lolImage from './images/lol.jpeg';
+import minecraftImage from './images/minecraft.jpeg';
 
 function Tutorials() {
   const [selectedTutorial, setSelectedTutorial] = useState(null);
@@ -26,13 +29,13 @@ function Tutorials() {
     { 
       id: 1, 
       title: 'Getting Started with "Cyberpunk 2077"', 
-      image: 'tutorial1.jpg', 
+      image: cyberpunkImage, 
       content: 'This beginner\'s guide will help you get started with "Cyberpunk 2077". Learn the basics of gameplay, character creation, and essential tips to survive in Night City.', 
       author: 'John Doe', 
       date: 'July 1, 2024' 
     },
-    { id: 2, title: 'Mastering "League of Legends"', image: 'tutorial2.jpg', content: 'In this guide, we cover the basics of "League of Legends", including roles, champions, and strategies to help you climb the ranks.', author: 'Jane Smith', date: 'June 28, 2024' },
-    { id: 3, title: 'Top Tips for "Minecraft" Beginners', image: 'tutorial3.jpg', content: 'Learn how to survive your first night in "Minecraft", find resources, and start building your first shelter with this beginner\'s guide.', author: 'Alex Johnson', date: 'June 25, 2024' },
+    { id: 2, title: 'Mastering "League of Legends"', image: lolImage, content: 'In this guide, we cover the basics of "League of Legends", including roles, champions, and strategies to help you climb the ranks.', author: 'Jane Smith', date: 'June 28, 2024' },
+    { id: 3, title: 'Top Tips for "Minecraft" Beginners', image: minecraftImage, content: 'Learn how to survive your first night in "Minecraft", find resources, and start building your first shelter with this beginner\'s guide.', author: 'Alex Johnson', date: 'June 25, 2024' },
   ];
 
   const openTutorial = (tutorial) => {

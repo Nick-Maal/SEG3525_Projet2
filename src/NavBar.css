@@ -1,8 +1,8 @@
 nav {
   background-color: #25046d; 
   color: white;
-  padding: 1rem 0;
-  z-index: 15; 
+  padding: 0;
+  z-index: 10; 
   height: auto; 
   display: block;
   position: relative;

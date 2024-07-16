@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import './Articles.css';
+import cyberpunkImage from './images/cyberpunk.jpeg';
+import esportsImage from './images/esports.jpg';
+import hadesImage from './images/hades.jpeg';
+import beatsaberImage from './images/beatsaber.jpeg';
+import gamingImage from './images/gaming.jpeg';
 
 function Articles() {
   const [selectedArticle, setSelectedArticle] = useState(null);
@@ -26,15 +31,15 @@ function Articles() {
     { 
       id: 1, 
       title: 'New Game Release Shatters Records', 
-      image: 'article1.jpg', 
+      image: cyberpunkImage, 
       content: 'The highly anticipated game "Cyberpunk 2077" has finally been released, and it has already smashed sales records, exceeding all expectations. With its immersive open-world environment, captivating storyline, and stunning visuals, "Cyberpunk 2077" is poised to become a landmark title in the gaming industry.', 
       author: 'John Doe', 
       date: 'July 1, 2024' 
     },
-    { id: 2, title: 'The Rise of eSports: A Global Phenomenon', image: 'article2.jpg', content: 'Competitive gaming, or eSports, has experienced explosive growth in recent years. Millions of viewers tune in to watch professional players compete in tournaments with massive prize pools. This article explores the factors behind the rise of eSports and its impact on the gaming landscape.', author: 'Jane Smith', date: 'June 28, 2024' },
-    { id: 3, title: 'Top 10 Indie Games You Must Play', image: 'article3.jpg', content: 'The indie game scene is thriving, offering a wealth of creative and innovative experiences. This article highlights ten must-play indie titles that you might have missed, covering various genres and gameplay styles.', author: 'Alex Johnson', date: 'June 25, 2024' },
-    { id: 4, title: 'Virtual Reality: The Future of Gaming?', image: 'article4.jpg', content: 'Virtual reality (VR) technology has the potential to revolutionize gaming, offering unparalleled immersion and interactivity. This article delves into the current state of VR gaming, its challenges, and its exciting possibilities for the future.', author: 'Emily Davis', date: 'June 20, 2024' },
-    { id: 5, title: 'The Impact of Gaming on Mental Health', image: 'article5.jpg', content: 'Video games can have both positive and negative effects on mental health. This article examines the research on gaming and mental well-being, discussing its potential benefits for cognitive skills and social connection, as well as its risks for addiction and isolation.', author: 'Michael Brown', date: 'June 15, 2024' },
+    { id: 2, title: 'The Rise of eSports: A Global Phenomenon', image: esportsImage, content: 'Competitive gaming, or eSports, has experienced explosive growth in recent years. Millions of viewers tune in to watch professional players compete in tournaments with massive prize pools. This article explores the factors behind the rise of eSports and its impact on the gaming landscape.', author: 'Jane Smith', date: 'June 28, 2024' },
+    { id: 3, title: 'Top 10 Indie Games You Must Play', image: hadesImage, content: 'The indie game scene is thriving, offering a wealth of creative and innovative experiences. This article highlights ten must-play indie titles that you might have missed, covering various genres and gameplay styles.', author: 'Alex Johnson', date: 'June 25, 2024' },
+    { id: 4, title: 'Virtual Reality: The Future of Gaming?', image: beatsaberImage, content: 'Virtual reality (VR) technology has the potential to revolutionize gaming, offering unparalleled immersion and interactivity. This article delves into the current state of VR gaming, its challenges, and its exciting possibilities for the future.', author: 'Emily Davis', date: 'June 20, 2024' },
+    { id: 5, title: 'The Impact of Gaming on Mental Health', image: gamingImage, content: 'Video games can have both positive and negative effects on mental health. This article examines the research on gaming and mental well-being, discussing its potential benefits for cognitive skills and social connection, as well as its risks for addiction and isolation.', author: 'Michael Brown', date: 'June 15, 2024' },
   ];
 
   const openArticle = (article) => {

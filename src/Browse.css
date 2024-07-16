@@ -1,139 +1,118 @@
 .browse-page {
-    display: flex;
-}
-  
-.filters {
-  width: 250px;
+  display: flex;
+  gap: 20px;
   padding: 20px;
-  border-right: 1px solid #ddd;
 }
-  
+
+.filters {
+  width: 200px;
+  max-height: 600px; /* Set a max height for the filters container */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .filter-group {
   margin-bottom: 20px;
 }
-  
-.filter-group label {
-  display: block;
+
+.filter-group h3 {
+  margin-bottom: 10px;
+}
+
+.filter-group div {
   margin-bottom: 5px;
 }
-  
+
 .game-grid {
+  flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
-  flex-grow: 1;
 }
-  
+
 .game-card {
   width: 200px;
+  background-color: #fff;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
+  border-radius: 5px;
   cursor: pointer;
   transition: transform 0.2s;
-  height: 150PX;
 }
-  
+
 .game-card:hover {
   transform: scale(1.05);
 }
-  
+
 .game-card img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 5px;
 }
-  
-.game-card h3 {
-  margin: 10px 0;
-}
-  
-.game-card p {
-  margin: 5px 0;
-}
-  
-.game-details {
+
+.game-details-container {
   position: fixed;
   top: 0;
-  right: 0;
-  width: 400px;
+  left: 0;
+  width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.game-details {
   background-color: #fff;
   padding: 20px;
-  border-left: 1px solid #ddd;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 800px;
+  max-height: 80%;
   overflow-y: auto;
-  margin-top: 108px;
-  margin-bottom: 80px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 }
-  
+
 .close-details {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
 }
-  
-.comment {
-  margin-bottom: 10px;
-  width: 100%;
+
+.scrollable-content {
+  max-height: 200px;
+  overflow-y: auto;
 }
-  
-.comment p {
-  margin: 5px 0;
-}
-  
-.comment-form {
-  margin-top: 20px;
-  margin-bottom: 300px;
-}
-  
-.comment-form input,
-.comment-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-  
-.comment-form .rating {
-  margin-bottom: 10px;
-}
-  
-.comment-form .star {
-  cursor: pointer;
-  font-size: 20px;
-  color: #ddd;
-}
-  
-.comment-form .star.filled {
-  color: #ffc107;
-}
-  
-.comment-form button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-  
-.comment-form button:hover {
-  background-color: #0056b3;
-}
-  
+
 .comment-filter {
   margin-bottom: 10px;
 }
-  
-.scrollable-content {
-  max-height: 50vh;
+
+.comments {
+  max-height: 150px;
   overflow-y: auto;
 }
-  
+
+.comment-form {
+  margin-top: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.star.filled {
+  color: gold;
+}
