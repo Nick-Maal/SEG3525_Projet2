@@ -1,12 +1,13 @@
 nav {
-  background-color: #25046d; 
+  background-color: #25046d;
   color: white;
   padding: 0;
-  z-index: 10; 
-  height: auto; 
+  z-index: 15;
+  height: auto;
   display: block;
-  position: relative;
-  margin-top: 6rem;
+  position: fixed;  
+  width: 100%; 
+  top: 80px;  
 }
 
 nav ul {
@@ -14,18 +15,18 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 nav li {
   margin: 0 1rem;
-  position: relative; 
+  position: relative;
 }
 
 nav a, .language-button {
   color: white;
   text-decoration: none;
-  padding: 14px 16px; 
+  padding: 14px 16px;
   display: inline-block;
   cursor: pointer;
 }
