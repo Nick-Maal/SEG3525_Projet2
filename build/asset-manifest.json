@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/SEG3525_Projet2/static/css/main.c9bd800f.css",
-    "main.js": "/SEG3525_Projet2/static/js/main.7f1667e7.js",
+    "main.css": "/SEG3525_Projet2/static/css/main.fcdf14a3.css",
+    "main.js": "/SEG3525_Projet2/static/js/main.b07acbd9.js",
     "static/media/logo.jpeg": "/SEG3525_Projet2/static/media/logo.43d59274dc6c5bbb083f.jpeg",
     "static/media/esports.jpg": "/SEG3525_Projet2/static/media/esports.8aa7c9cf29844dce4fa7.jpg",
     "static/media/rdr2.jpeg": "/SEG3525_Projet2/static/media/rdr2.31306667740f151c21b0.jpeg",
@@ -12,11 +12,11 @@
     "static/media/celeste.jpeg": "/SEG3525_Projet2/static/media/celeste.95848da00be76d7664f9.jpeg",
     "static/media/imageTeam.png": "/SEG3525_Projet2/static/media/imageTeam.9f517cd4d7d76d17fab7.png",
     "index.html": "/SEG3525_Projet2/index.html",
-    "main.c9bd800f.css.map": "/SEG3525_Projet2/static/css/main.c9bd800f.css.map",
-    "main.7f1667e7.js.map": "/SEG3525_Projet2/static/js/main.7f1667e7.js.map"
+    "main.fcdf14a3.css.map": "/SEG3525_Projet2/static/css/main.fcdf14a3.css.map",
+    "main.b07acbd9.js.map": "/SEG3525_Projet2/static/js/main.b07acbd9.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9bd800f.css",
-    "static/js/main.7f1667e7.js"
+    "static/css/main.fcdf14a3.css",
+    "static/js/main.b07acbd9.js"
   ]
 }
