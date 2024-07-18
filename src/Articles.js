@@ -11,13 +11,13 @@ function Articles() {
   const [articleLikes, setArticleLikes] = useState({});
   const [articleComments, setArticleComments] = useState({
     1: [
-      { name: 'GamerGirl123', comment: 'Amazing article! This game is a must-play.' },
-      { name: null, comment: 'I disagree with some points, but overall, it was informative.' }
+      { name: 'GamerGirl123', comment: 'Amazing article! This game is a must-play.', rating: 5 },
+      { name: 'Anonymous', comment: 'I disagree with some points, but overall, it was informative.', rating: 3 }
     ],
-    2: [{ name: 'ProGamer', comment: 'eSports are definitely taking over!' }],
-    3: [{ name: null, comment: 'Great list! I haven\'t heard of some of these.' }],
+    2: [{ name: 'ProGamer', comment: 'eSports are definitely taking over!', rating: 4 }],
+    3: [{ name: 'Anonymous', comment: 'Great list! I haven\'t heard of some of these.', rating: 4 }],
     4: [],
-    5: [{ name: 'MentalHealthAdvocate', comment: 'Important topic, thanks for raising awareness.' }],
+    5: [{ name: 'MentalHealthAdvocate', comment: 'Important topic, thanks for raising awareness.', rating: 5 }],
     6: [],
     7: [],
     8: [],
@@ -26,6 +26,8 @@ function Articles() {
 
   const [newComment, setNewComment] = useState('');
   const [newCommentName, setNewCommentName] = useState('');
+  const [newCommentRating, setNewCommentRating] = useState(0);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const articles = [
     { 
@@ -58,20 +60,26 @@ function Articles() {
   };
 
   const handleCommentSubmit = () => {
-    if (newComment.trim() !== '') {
-      const comment = {
-        name: newCommentName.trim() !== '' ? newCommentName : null,
-        comment: newComment
-      };
-
-      setArticleComments(prevComments => ({
-        ...prevComments,
-        [selectedArticle.id]: [...(prevComments[selectedArticle.id] || []), comment]
-      }));
-
-      setNewComment('');
-      setNewCommentName('');
+    if (newComment.trim() === '' || newCommentRating === 0) {
+      setErrorMessage('Please fill in all fields and provide a rating.');
+      return;
     }
+
+    const comment = {
+      name: newCommentName.trim() !== '' ? newCommentName : 'Anonymous',
+      comment: newComment,
+      rating: newCommentRating
+    };
+
+    setArticleComments(prevComments => ({
+      ...prevComments,
+      [selectedArticle.id]: [...(prevComments[selectedArticle.id] || []), comment]
+    }));
+
+    setNewComment('');
+    setNewCommentName('');
+    setNewCommentRating(0);
+    setErrorMessage('');
   };
 
   return (
@@ -104,12 +112,14 @@ function Articles() {
               <ul>
                 {articleComments[selectedArticle.id].map((comment, index) => (
                   <li key={index}>
-                    <b>{comment.name}:</b> {comment.comment}
-                  </li>
+                  <b>{comment.name}:</b> {comment.comment}
+                  {comment.rating > 0 && <span> - {comment.rating} Stars</span>}
+                </li>
                 ))}
               </ul>
 
               <div className="comment-form">
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
                 <input 
                   type="text" 
                   placeholder="Your name (optional)"
@@ -121,6 +131,17 @@ function Articles() {
                   value={newComment}
                   onChange={(e) => setNewComment(e.target.value)}
                 />
+                <select 
+                  value={newCommentRating}
+                  onChange={(e) => setNewCommentRating(parseInt(e.target.value))}
+                >
+                  <option value={0}>Select Rating (Optional)</option>
+                  <option value={1}>1 Star</option>
+                  <option value={2}>2 Stars</option>
+                  <option value={3}>3 Stars</option>
+                  <option value={4}>4 Stars</option>
+                  <option value={5}>5 Stars</option>
+                </select>
                 <button onClick={handleCommentSubmit}>Submit Comment</button>
               </div>
             </div>

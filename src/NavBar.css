@@ -1,5 +1,5 @@
 nav {
-  background-color: #25046d;
+  background-color: #8872b7;
   color: white;
   padding: 0;
   z-index: 15;
@@ -24,7 +24,7 @@ nav li {
 }
 
 nav a, .language-button {
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 14px 16px;
   display: inline-block;
@@ -53,7 +53,7 @@ nav a:hover, .language-button:hover {
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #d6c8f7;
 }
 
 .dropdown:hover .dropdown-content {

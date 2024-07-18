@@ -13,6 +13,7 @@
 .forum-card {
   border: 2px solid #e6e6fa;
   padding: 1rem;
+  color: #d6c8f7;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;

@@ -9,21 +9,19 @@ function Tutorials() {
   const [tutorialLikes, setTutorialLikes] = useState({});
   const [tutorialComments, setTutorialComments] = useState({
     1: [
-      { name: 'NewbieGamer', comment: 'This guide was super helpful, thank you!' },
-      { name: 'ProPlayer', comment: 'Great tips for beginners!' }
+      { name: 'NewbieGamer', comment: 'This guide was super helpful, thank you!', rating: 4 },
+      { name: 'ProPlayer', comment: 'Great tips for beginners!', rating: 5 }
     ],
-    2: [{ name: 'StrategyMaster', comment: 'I didn\'t know about these strategies!' }],
-    3: [{ name: null, comment: 'Helpful tutorial, I improved a lot.' }],
+    2: [{ name: 'StrategyMaster', comment: 'I didn\'t know about these strategies!', rating: 3 }],
+    3: [{ name: 'Anonymous', comment: 'Helpful tutorial, I improved a lot.', rating: 4 }],
     4: [],
-    5: [{ name: 'Techie', comment: 'Thanks for the step-by-step instructions.' }],
-    6: [],
-    7: [],
-    8: [],
-    9: [],
+    5: [{ name: 'Techie', comment: 'Thanks for the step-by-step instructions.', rating: 5 }],
   });
 
   const [newComment, setNewComment] = useState('');
   const [newCommentName, setNewCommentName] = useState('');
+  const [newCommentRating, setNewCommentRating] = useState(0);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const tutorials = [
     { 
@@ -54,20 +52,26 @@ function Tutorials() {
   };
 
   const handleCommentSubmit = () => {
-    if (newComment.trim() !== '') {
-      const comment = {
-        name: newCommentName.trim() !== '' ? newCommentName : null,
-        comment: newComment
-      };
-
-      setTutorialComments(prevComments => ({
-        ...prevComments,
-        [selectedTutorial.id]: [...(prevComments[selectedTutorial.id] || []), comment]
-      }));
-
-      setNewComment('');
-      setNewCommentName('');
+    if (newComment.trim() === '') {
+      setErrorMessage('Please fill in the comment field.');
+      return;
     }
+
+    const comment = {
+      name: newCommentName.trim() !== '' ? newCommentName : 'Anonymous',
+      comment: newComment,
+      rating: newCommentRating
+    };
+
+    setTutorialComments(prevComments => ({
+      ...prevComments,
+      [selectedTutorial.id]: [...(prevComments[selectedTutorial.id] || []), comment]
+    }));
+
+    setNewComment('');
+    setNewCommentName('');
+    setNewCommentRating(0);
+    setErrorMessage('');
   };
 
   return (
@@ -101,11 +105,13 @@ function Tutorials() {
                 {tutorialComments[selectedTutorial.id].map((comment, index) => (
                   <li key={index}>
                     <b>{comment.name}:</b> {comment.comment}
+                    {comment.rating > 0 && <span> - {comment.rating} Stars</span>}
                   </li>
                 ))}
               </ul>
 
               <div className="comment-form">
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
                 <input 
                   type="text" 
                   placeholder="Your name (optional)"
@@ -117,6 +123,17 @@ function Tutorials() {
                   value={newComment}
                   onChange={(e) => setNewComment(e.target.value)}
                 />
+                <select 
+                  value={newCommentRating}
+                  onChange={(e) => setNewCommentRating(parseInt(e.target.value))}
+                >
+                  <option value={0}>Select Rating (Optional)</option>
+                  <option value={1}>1 Star</option>
+                  <option value={2}>2 Stars</option>
+                  <option value={3}>3 Stars</option>
+                  <option value={4}>4 Stars</option>
+                  <option value={5}>5 Stars</option>
+                </select>
                 <button onClick={handleCommentSubmit}>Submit Comment</button>
               </div>
             </div>
