@@ -11,6 +11,7 @@ import Articles from './Articles';
 import Browse from './Browse';
 import Tutorials from './Tutorials';
 import Forums from './Forums';
+import FAQPage from './FAQPage';  
 
 function App() {
   const [language, setLanguage] = useState('en');
@@ -32,6 +33,7 @@ function App() {
             <Route path="/browse" element={<Browse />} />
             <Route path="/tutorials" element={<Tutorials />} />
             <Route path="/forums" element={<Forums />} />
+            <Route path="/faq" element={<FAQPage />} />  
           </Routes>
         </div>
         <Footer />
