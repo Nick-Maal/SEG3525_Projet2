@@ -10,7 +10,7 @@ function FAQPage() {
         <p>Pixel Nexus is a platform that connects video game communities, offering news, reviews, guides, forums, and a marketplace for used games.</p>
       </div>
       <div className="faq-section">
-        <h2>How can I purchase used games?</h2>
+        <h2>How can I look at used games?</h2>
         <p>You can browse our marketplace, filter by genre and price, and find games listed.</p>
       </div>
       <div className="faq-section">
