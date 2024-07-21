@@ -5,9 +5,7 @@ import teamImage from './imageTeam.png';
 function About() {
   return (
     <main className="about-page" role="main">
-      <header>
-        <h1>About Us</h1>
-      </header>
+      <h1>About Us</h1>
       <section className="about-content">
         <div className="team-image">
           <img src={teamImage} alt="Illustration of Pixel Nexus team during a meeting" aria-describedby="teamImageDesc" />

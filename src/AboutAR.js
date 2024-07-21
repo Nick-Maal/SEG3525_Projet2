@@ -9,7 +9,7 @@ function About({ language }) {
 
       <div className="about-content">
         <div className="team-image">
-          <img src={teamImage} alt="Our Team" />
+          <img src={teamImage} alt="Our Company" />
           <span className="sr-only">رسم اجتماع الفريق</span> 
         </div>
         <div className="company-info">
