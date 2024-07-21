@@ -1,0 +1,1 @@
+Welcome to my website to bring the gaming community closer together with forums, tutoriels, articles, etc. This website is a high fidelity website and currently only contains the front end portion of it. This website was created for the SEG 3525 class.
