@@ -16,13 +16,12 @@ function Forums() {
     },
     {
       id: 2,
-      topic: 'Best Gaming Setups for Under $1000',
+      topic: 'Best Gaming Setup for Under $1000',
       author: 'PCBuilder',
       messages: [
-        { name: 'TechWizard', message: 'I recently built a great PC for under $800. Here are the specs...' },
+        { name: 'TechWizard', message: 'I recently built a great PC for under $800. Here are the specs (tbc)' },
       ],
     },
-    // Add more forums here
   ]);
 
   const [newForumTopic, setNewForumTopic] = useState('');
