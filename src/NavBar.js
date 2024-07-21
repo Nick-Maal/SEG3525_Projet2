@@ -6,17 +6,17 @@ function NavBar({ onLanguageChange, language }) {
   return (
     <nav>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Us</Link></li>
+        <li><Link to="/">{language === 'en' ? 'Home' : 'الرئيسية'}</Link></li>
+        <li><Link to="/about">{language === 'en' ? 'About Us' : 'معلومات عنا'}</Link></li>
         <li className="dropdown">
-          <Link to="#">Ressources</Link>
+          <Link to="#">{language === 'en' ? 'Resources' : 'الموارد'}</Link>
           <div className="dropdown-content">
-            <Link to="/articles">Articles</Link>
-            <Link to="/tutorials">Tutorials</Link>
+            <Link to="/articles">{language === 'en' ? 'Articles' : 'مقالات'}</Link>
+            <Link to="/tutorials">{language === 'en' ? 'Tutorials' : 'دروس'}</Link>
           </div>
         </li>
-        <li><Link to="/browse">Browse</Link></li>
-        <li><Link to="/forums">Forums</Link></li>
+        <li><Link to="/browse">{language === 'en' ? 'Browse' : 'تصفح'}</Link></li>
+        <li><Link to="/forums">{language === 'en' ? 'Forums' : 'المنتديات'}</Link></li>
         <li>
           <button className="language-button" onClick={onLanguageChange}>
             {language === 'en' ? 'العربية' : 'English'}
