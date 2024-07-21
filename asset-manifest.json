@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/SEG3525_Projet2/static/css/main.298e8608.css",
+    "main.css": "/SEG3525_Projet2/static/css/main.2ee51a92.css",
     "main.js": "/SEG3525_Projet2/static/js/main.824ae02b.js",
     "static/media/logo.jpeg": "/SEG3525_Projet2/static/media/logo.43d59274dc6c5bbb083f.jpeg",
     "static/media/esports.jpg": "/SEG3525_Projet2/static/media/esports.8aa7c9cf29844dce4fa7.jpg",
@@ -12,11 +12,11 @@
     "static/media/celeste.jpeg": "/SEG3525_Projet2/static/media/celeste.95848da00be76d7664f9.jpeg",
     "static/media/imageTeam.png": "/SEG3525_Projet2/static/media/imageTeam.9f517cd4d7d76d17fab7.png",
     "index.html": "/SEG3525_Projet2/index.html",
-    "main.298e8608.css.map": "/SEG3525_Projet2/static/css/main.298e8608.css.map",
+    "main.2ee51a92.css.map": "/SEG3525_Projet2/static/css/main.2ee51a92.css.map",
     "main.824ae02b.js.map": "/SEG3525_Projet2/static/js/main.824ae02b.js.map"
   },
   "entrypoints": [
-    "static/css/main.298e8608.css",
+    "static/css/main.2ee51a92.css",
     "static/js/main.824ae02b.js"
   ]
 }
