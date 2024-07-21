@@ -19,7 +19,7 @@ function FAQPage() {
       </div>
       <div className="faq-section">
         <h2>Can I submit my own articles?</h2>
-        <p>Currently, we are not accepting user-submitted articles, but stay tuned for future updates where we may offer this feature.</p>
+        <p>Currently we are not accepting user-submitted articles, but stay tuned for future updates where we may offer this feature.</p>
       </div>
     </main>
   );
